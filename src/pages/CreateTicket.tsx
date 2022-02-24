@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Col, Input, Button, Row, Typography, Divider } from "antd";
+import { Col, Button, Row, Typography } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 import { useHiddeMenu } from "../hooks/useHiddeMenu";
 import { SocketContext } from "../context/SocketContext";
@@ -16,8 +16,6 @@ function CreateTicket() {
       setTicket(ticket);
       console.log(ticket);
     });
-
-    //  console.log("adding new ticket");
   };
 
   return (
@@ -31,14 +29,7 @@ function CreateTicket() {
           textAlign: "center",
         }}
       >
-        <Col
-          span={14}
-          offset={0}
-          // style={{
-          //   justifyContent: "center",
-          //   alignItems: "center",
-          // }}
-        >
+        <Col span={14} offset={0}>
           <Title level={4} style={{ fontWeight: "bold" }}>
             Presione aqui para crear un nuevo ticket
           </Title>
